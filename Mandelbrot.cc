@@ -4,6 +4,7 @@
 #include <vector>
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
+#include <time.h>
 
 int mandelbrot(double real, double imag)
 {
@@ -26,6 +27,8 @@ int mandelbrot(double real, double imag)
 
 int main()
 {
+    clock_t init_start = clock();
+
     int width = 1000; // Increased resolution for better PNG quality
     int height = 800;
 
@@ -100,6 +103,10 @@ int main()
     stbi_write_png("mandelbrot.png", width, height, 3, image.data(), width * 3);
 
     std::cout << "Mandelbrot set image saved as mandelbrot.png" << std::endl;
+
+    clock_t init_end = clock();
+    
+    printf("Mandelbrot compute took: %f\n seconds", (double)(init_end - init_start));
 
     return 0;
 }
