@@ -29,8 +29,8 @@ int main()
 {
     clock_t init_start = clock();
 
-    int width = 1000; // Increased resolution for better PNG quality
-    int height = 800;
+    int width = 10000; // Increased resolution for better PNG quality
+    int height = 8000;
 
     double x_start = -2.0;
     double x_fin = 1.0;
@@ -106,7 +106,7 @@ int main()
 
     clock_t init_end = clock();
     
-    printf("Mandelbrot compute took: %f\n seconds", (double)(init_end - init_start));
+    printf("Mandelbrot compute took: %f seconds\n", (double)(init_end - init_start) / CLOCKS_PER_SEC);
 
     return 0;
 }
