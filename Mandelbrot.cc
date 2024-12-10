@@ -7,7 +7,7 @@
 
 int mandelbrot(double real, double imag)
 {
-    int limit = 100;
+    int limit = 10000;
     double zReal = real;
     double zImag = imag;
 
