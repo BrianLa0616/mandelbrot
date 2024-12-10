@@ -16,7 +16,7 @@ def compile_mandelbrot():
 
 def run_mandelbrot(size):
     """Run the Mandelbrot program with specified size and return runtime"""
-    with open('Mandelbrot.cc', 'r') as file:
+    with open('baseline_mandelbrot.cc', 'r') as file:
         content = file.read()
     
     modified_content = re.sub(
@@ -30,11 +30,11 @@ def run_mandelbrot(size):
         modified_content
     )
     
-    with open('Mandelbrot.cc', 'w') as file:
+    with open('baseline_mandelbrot.cc', 'w') as file:
         file.write(modified_content)
     
     compile_mandelbrot()
-    result = subprocess.run(['./build/serial'], capture_output=True, text=True)
+    result = subprocess.run(['./build/baseline'], capture_output=True, text=True)
     
     match = re.search(r'Mandelbrot compute took: (\d+\.\d+)', result.stdout)
     if match:
