@@ -1,0 +1,482 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 99.18     18.11    18.11   800000     0.02     0.02  mandelbrot(double, double)
+  0.27     18.16     0.05   543062     0.00     0.00  stbiw__zlib_countm(unsigned char*, unsigned char*, int)
+  0.16     18.19     0.03     4800     0.01     0.01  stbiw__encode_png_line(unsigned char*, int, int, int, int, int, int, signed char*)
+  0.11     18.21     0.02        1    20.00   140.00  stbi_write_png_to_mem
+  0.08     18.23     0.01    62315     0.00     0.00  stbiw__zhash(unsigned char*)
+  0.08     18.24     0.01        1    15.00    80.00  stbi_zlib_compress
+  0.05     18.25     0.01  2762997     0.00     0.00  stbiw__paeth(int, int, int)
+  0.05     18.26     0.01                             main
+  0.00     18.26     0.00  2400000     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long)
+  0.00     18.26     0.00    93663     0.00     0.00  stbiw__zlib_flushf(unsigned char*, unsigned int*, int*)
+  0.00     18.26     0.00    58100     0.00     0.00  stbiw__zlib_bitrev(int, int)
+  0.00     18.26     0.00      633     0.00     0.00  stbiw__sbgrowf(void**, int, int)
+  0.00     18.26     0.00        3     0.00     0.00  stbiw__crc32(unsigned char*, int)
+  0.00     18.26     0.00        3     0.00     0.00  stbiw__wpcrc(unsigned char**, int)
+  0.00     18.26     0.00        3     0.00     0.00  std::allocator<unsigned char>::~allocator()
+  0.00     18.26     0.00        3     0.00     0.00  std::__new_allocator<unsigned char>::~__new_allocator()
+  0.00     18.26     0.00        2     0.00     0.00  std::__new_allocator<unsigned char>::_M_max_size() const
+  0.00     18.26     0.00        2     0.00     0.00  std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        2     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator()
+  0.00     18.26     0.00        2     0.00     0.00  std::__new_allocator<unsigned char>::__new_allocator(std::__new_allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  _GLOBAL__sub_I_stbi_write_png_compression_level
+  0.00     18.26     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00     18.26     0.00        1     0.00     0.00  stbiw__fopen(char const*, char const*)
+  0.00     18.26     0.00        1     0.00     0.00  std::__new_allocator<unsigned char>::max_size() const
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const
+  0.00     18.26     0.00        1     0.00     0.00  std::allocator<unsigned char>::allocator()
+  0.00     18.26     0.00        1     0.00     0.00  void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl()
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data()
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base()
+  0.00     18.26     0.00        1     0.00     0.00  std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::__new_allocator<unsigned char>::allocate(unsigned long, void const*)
+  0.00     18.26     0.00        1     0.00     0.00  std::__new_allocator<unsigned char>::__new_allocator()
+  0.00     18.26     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<unsigned char> >::deallocate(std::allocator<unsigned char>&, unsigned char*, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<unsigned char> >::max_size(std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::data()
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
+  0.00     18.26     0.00        1     0.00     0.00  std::vector<unsigned char, std::allocator<unsigned char> >::~vector()
+  0.00     18.26     0.00        1     0.00     0.00  void std::_Construct<unsigned char>(unsigned char*)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::__addressof<unsigned char>(unsigned char&)
+  0.00     18.26     0.00        1     0.00     0.00  std::__size_to_integer(unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  std::iterator_traits<unsigned char*>::iterator_category std::__iterator_category<unsigned char*>(unsigned char* const&)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     18.26     0.00        1     0.00     0.00  unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&)
+  0.00     18.26     0.00        1     0.00     0.00  void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*)
+  0.00     18.26     0.00        1     0.00     0.00  void std::_Destroy<unsigned char*, unsigned char>(unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  0.00     18.26     0.00        1     0.00     0.00  void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  0.00     18.26     0.00        1     0.00     0.00  __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  0.00     18.26     0.00        1     0.00     0.00  operator new(unsigned long, void*)
+  0.00     18.26     0.00        1     0.00   140.00  stbi_write_png
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.05% of 18.26 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.01   18.25                 main [1]
+               18.11    0.00  800000/800000      mandelbrot(double, double) [2]
+                0.00    0.14       1/1           stbi_write_png [3]
+                0.00    0.00 2400000/2400000     std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) [26]
+                0.00    0.00       1/1           std::allocator<unsigned char>::allocator() [43]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [64]
+                0.00    0.00       1/3           std::allocator<unsigned char>::~allocator() [32]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::data() [63]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [65]
+-----------------------------------------------
+               18.11    0.00  800000/800000      main [1]
+[2]     99.2   18.11    0.00  800000         mandelbrot(double, double) [2]
+-----------------------------------------------
+                0.00    0.14       1/1           main [1]
+[3]      0.8    0.00    0.14       1         stbi_write_png [3]
+                0.02    0.12       1/1           stbi_write_png_to_mem [4]
+                0.00    0.00       1/1           stbiw__fopen(char const*, char const*) [40]
+-----------------------------------------------
+                0.02    0.12       1/1           stbi_write_png [3]
+[4]      0.8    0.02    0.12       1         stbi_write_png_to_mem [4]
+                0.01    0.07       1/1           stbi_zlib_compress [5]
+                0.03    0.01    4800/4800        stbiw__encode_png_line(unsigned char*, int, int, int, int, int, int, signed char*) [7]
+                0.00    0.00       3/3           stbiw__wpcrc(unsigned char**, int) [31]
+-----------------------------------------------
+                0.01    0.07       1/1           stbi_write_png_to_mem [4]
+[5]      0.4    0.01    0.07       1         stbi_zlib_compress [5]
+                0.05    0.00  543062/543062      stbiw__zlib_countm(unsigned char*, unsigned char*, int) [6]
+                0.01    0.00   62315/62315       stbiw__zhash(unsigned char*) [8]
+                0.00    0.00   93663/93663       stbiw__zlib_flushf(unsigned char*, unsigned int*, int*) [27]
+                0.00    0.00   58100/58100       stbiw__zlib_bitrev(int, int) [28]
+                0.00    0.00     619/633         stbiw__sbgrowf(void**, int, int) [29]
+-----------------------------------------------
+                0.05    0.00  543062/543062      stbi_zlib_compress [5]
+[6]      0.3    0.05    0.00  543062         stbiw__zlib_countm(unsigned char*, unsigned char*, int) [6]
+-----------------------------------------------
+                0.03    0.01    4800/4800        stbi_write_png_to_mem [4]
+[7]      0.2    0.03    0.01    4800         stbiw__encode_png_line(unsigned char*, int, int, int, int, int, int, signed char*) [7]
+                0.01    0.00 2762997/2762997     stbiw__paeth(int, int, int) [9]
+-----------------------------------------------
+                0.01    0.00   62315/62315       stbi_zlib_compress [5]
+[8]      0.1    0.01    0.00   62315         stbiw__zhash(unsigned char*) [8]
+-----------------------------------------------
+                0.01    0.00 2762997/2762997     stbiw__encode_png_line(unsigned char*, int, int, int, int, int, int, signed char*) [7]
+[9]      0.1    0.01    0.00 2762997         stbiw__paeth(int, int, int) [9]
+-----------------------------------------------
+                0.00    0.00 2400000/2400000     main [1]
+[26]     0.0    0.00    0.00 2400000         std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long) [26]
+-----------------------------------------------
+                0.00    0.00   93663/93663       stbi_zlib_compress [5]
+[27]     0.0    0.00    0.00   93663         stbiw__zlib_flushf(unsigned char*, unsigned int*, int*) [27]
+                0.00    0.00      14/633         stbiw__sbgrowf(void**, int, int) [29]
+-----------------------------------------------
+                0.00    0.00   58100/58100       stbi_zlib_compress [5]
+[28]     0.0    0.00    0.00   58100         stbiw__zlib_bitrev(int, int) [28]
+-----------------------------------------------
+                0.00    0.00      14/633         stbiw__zlib_flushf(unsigned char*, unsigned int*, int*) [27]
+                0.00    0.00     619/633         stbi_zlib_compress [5]
+[29]     0.0    0.00    0.00     633         stbiw__sbgrowf(void**, int, int) [29]
+-----------------------------------------------
+                0.00    0.00       3/3           stbiw__wpcrc(unsigned char**, int) [31]
+[30]     0.0    0.00    0.00       3         stbiw__crc32(unsigned char*, int) [30]
+-----------------------------------------------
+                0.00    0.00       3/3           stbi_write_png_to_mem [4]
+[31]     0.0    0.00    0.00       3         stbiw__wpcrc(unsigned char**, int) [31]
+                0.00    0.00       3/3           stbiw__crc32(unsigned char*, int) [30]
+-----------------------------------------------
+                0.00    0.00       1/3           main [1]
+                0.00    0.00       1/3           std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [61]
+                0.00    0.00       1/3           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [47]
+[32]     0.0    0.00    0.00       3         std::allocator<unsigned char>::~allocator() [32]
+                0.00    0.00       3/3           std::__new_allocator<unsigned char>::~__new_allocator() [33]
+-----------------------------------------------
+                0.00    0.00       3/3           std::allocator<unsigned char>::~allocator() [32]
+[33]     0.0    0.00    0.00       3         std::__new_allocator<unsigned char>::~__new_allocator() [33]
+-----------------------------------------------
+                0.00    0.00       1/2           std::__new_allocator<unsigned char>::max_size() const [41]
+                0.00    0.00       1/2           std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [54]
+[34]     0.0    0.00    0.00       2         std::__new_allocator<unsigned char>::_M_max_size() const [34]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [61]
+                0.00    0.00       1/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [46]
+[35]     0.0    0.00    0.00       2         std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&) [35]
+                0.00    0.00       2/2           std::__new_allocator<unsigned char>::__new_allocator(std::__new_allocator<unsigned char> const&) [37]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [65]
+                0.00    0.00       1/2           std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [62]
+[36]     0.0    0.00    0.00       2         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [36]
+-----------------------------------------------
+                0.00    0.00       2/2           std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&) [35]
+[37]     0.0    0.00    0.00       2         std::__new_allocator<unsigned char>::__new_allocator(std::__new_allocator<unsigned char> const&) [37]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [109]
+[38]     0.0    0.00    0.00       1         _GLOBAL__sub_I_stbi_write_png_compression_level [38]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [39]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_stbi_write_png_compression_level [38]
+[39]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [39]
+-----------------------------------------------
+                0.00    0.00       1/1           stbi_write_png [3]
+[40]     0.0    0.00    0.00       1         stbiw__fopen(char const*, char const*) [40]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::max_size(std::allocator<unsigned char> const&) [58]
+[41]     0.0    0.00    0.00       1         std::__new_allocator<unsigned char>::max_size() const [41]
+                0.00    0.00       1/2           std::__new_allocator<unsigned char>::_M_max_size() const [34]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::data() [63]
+[42]     0.0    0.00    0.00       1         unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [42]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[43]     0.0    0.00    0.00       1         std::allocator<unsigned char>::allocator() [43]
+                0.00    0.00       1/1           std::__new_allocator<unsigned char>::__new_allocator() [55]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [75]
+[44]     0.0    0.00    0.00       1         void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [44]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [49]
+[45]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [45]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long) [57]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [51]
+[46]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [46]
+                0.00    0.00       1/2           std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&) [35]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [50]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [52]
+[47]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [47]
+                0.00    0.00       1/3           std::allocator<unsigned char>::~allocator() [32]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [52]
+[48]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [48]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::deallocate(std::allocator<unsigned char>&, unsigned char*, unsigned long) [56]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [51]
+[49]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [49]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [45]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [46]
+[50]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [50]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [64]
+[51]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [51]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [46]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [49]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [65]
+[52]     0.0    0.00    0.00       1         std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [52]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [47]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [48]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::deallocate(std::allocator<unsigned char>&, unsigned char*, unsigned long) [56]
+[53]     0.0    0.00    0.00       1         std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [53]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long) [57]
+[54]     0.0    0.00    0.00       1         std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [54]
+                0.00    0.00       1/2           std::__new_allocator<unsigned char>::_M_max_size() const [34]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<unsigned char>::allocator() [43]
+[55]     0.0    0.00    0.00       1         std::__new_allocator<unsigned char>::__new_allocator() [55]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [48]
+[56]     0.0    0.00    0.00       1         std::allocator_traits<std::allocator<unsigned char> >::deallocate(std::allocator<unsigned char>&, unsigned char*, unsigned long) [56]
+                0.00    0.00       1/1           std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [53]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [45]
+[57]     0.0    0.00    0.00       1         std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long) [57]
+                0.00    0.00       1/1           std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [54]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [60]
+[58]     0.0    0.00    0.00       1         std::allocator_traits<std::allocator<unsigned char> >::max_size(std::allocator<unsigned char> const&) [58]
+                0.00    0.00       1/1           std::__new_allocator<unsigned char>::max_size() const [41]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [71]
+[59]     0.0    0.00    0.00       1         unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [59]
+                0.00    0.00       1/1           unsigned char* std::__addressof<unsigned char>(unsigned char&) [68]
+                0.00    0.00       1/1           void std::_Construct<unsigned char>(unsigned char*) [66]
+                0.00    0.00       1/1           unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [74]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [61]
+[60]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [60]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<unsigned char> >::max_size(std::allocator<unsigned char> const&) [58]
+                0.00    0.00       1/1           unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [64]
+[61]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [61]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [60]
+                0.00    0.00       1/2           std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&) [35]
+                0.00    0.00       1/3           std::allocator<unsigned char>::~allocator() [32]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [64]
+[62]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [62]
+                0.00    0.00       1/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [36]
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [72]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[63]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::data() [63]
+                0.00    0.00       1/1           unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [42]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[64]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) [64]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [61]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [51]
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [62]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[65]     0.0    0.00    0.00       1         std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [65]
+                0.00    0.00       1/2           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [36]
+                0.00    0.00       1/1           std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [52]
+                0.00    0.00       1/1           void std::_Destroy<unsigned char*, unsigned char>(unsigned char*, unsigned char*, std::allocator<unsigned char>&) [76]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [59]
+[66]     0.0    0.00    0.00       1         void std::_Construct<unsigned char>(unsigned char*) [66]
+                0.00    0.00       1/1           operator new(unsigned long, void*) [79]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [74]
+[67]     0.0    0.00    0.00       1         unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [67]
+                0.00    0.00       1/1           void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [77]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [59]
+[68]     0.0    0.00    0.00       1         unsigned char* std::__addressof<unsigned char>(unsigned char&) [68]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [74]
+[69]     0.0    0.00    0.00       1         std::__size_to_integer(unsigned long) [69]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [74]
+[70]     0.0    0.00    0.00       1         std::iterator_traits<unsigned char*>::iterator_category std::__iterator_category<unsigned char*>(unsigned char* const&) [70]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [72]
+[71]     0.0    0.00    0.00       1         unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [71]
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [59]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [62]
+[72]     0.0    0.00    0.00       1         unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&) [72]
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [71]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [60]
+[73]     0.0    0.00    0.00       1         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [59]
+[74]     0.0    0.00    0.00       1         unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&) [74]
+                0.00    0.00       1/1           std::__size_to_integer(unsigned long) [69]
+                0.00    0.00       1/1           std::iterator_traits<unsigned char*>::iterator_category std::__iterator_category<unsigned char*>(unsigned char* const&) [70]
+                0.00    0.00       1/1           unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [67]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<unsigned char*, unsigned char>(unsigned char*, unsigned char*, std::allocator<unsigned char>&) [76]
+[75]     0.0    0.00    0.00       1         void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [75]
+                0.00    0.00       1/1           void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [44]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<unsigned char, std::allocator<unsigned char> >::~vector() [65]
+[76]     0.0    0.00    0.00       1         void std::_Destroy<unsigned char*, unsigned char>(unsigned char*, unsigned char*, std::allocator<unsigned char>&) [76]
+                0.00    0.00       1/1           void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*) [75]
+-----------------------------------------------
+                0.00    0.00       1/1           unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag) [67]
+[77]     0.0    0.00    0.00       1         void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [77]
+                0.00    0.00       1/1           __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [78]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [77]
+[78]     0.0    0.00    0.00       1         __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&) [78]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Construct<unsigned char>(unsigned char*) [66]
+[79]     0.0    0.00    0.00       1         operator new(unsigned long, void*) [79]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [38] _GLOBAL__sub_I_stbi_write_png_compression_level [46] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::_Vector_impl(std::allocator<unsigned char> const&) [64] std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
+   [2] mandelbrot(double, double) [47] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl::~_Vector_impl() [65] std::vector<unsigned char, std::allocator<unsigned char> >::~vector()
+  [39] __static_initialization_and_destruction_0(int, int) [48] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_deallocate(unsigned char*, unsigned long) [26] std::vector<unsigned char, std::allocator<unsigned char> >::operator[](unsigned long)
+  [30] stbiw__crc32(unsigned char*, int) [49] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) [66] void std::_Construct<unsigned char>(unsigned char*)
+  [40] stbiw__fopen(char const*, char const*) [50] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl_data::_Vector_impl_data() [67] unsigned char* std::__fill_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&, std::random_access_iterator_tag)
+   [9] stbiw__paeth(int, int, int) [36] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_get_Tp_allocator() [68] unsigned char* std::__addressof<unsigned char>(unsigned char&)
+  [31] stbiw__wpcrc(unsigned char**, int) [51] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) [69] std::__size_to_integer(unsigned long)
+   [8] stbiw__zhash(unsigned char*) [52] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base() [70] std::iterator_traits<unsigned char*>::iterator_category std::__iterator_category<unsigned char*>(unsigned char* const&)
+  [29] stbiw__sbgrowf(void**, int, int) [53] std::__new_allocator<unsigned char>::deallocate(unsigned char*, unsigned long) [71] unsigned char* std::__uninitialized_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+  [28] stbiw__zlib_bitrev(int, int) [54] std::__new_allocator<unsigned char>::allocate(unsigned long, void const*) [72] unsigned char* std::__uninitialized_default_n_a<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, std::allocator<unsigned char>&)
+   [6] stbiw__zlib_countm(unsigned char*, unsigned char*, int) [37] std::__new_allocator<unsigned char>::__new_allocator(std::__new_allocator<unsigned char> const&) [73] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [27] stbiw__zlib_flushf(unsigned char*, unsigned int*, int*) [55] std::__new_allocator<unsigned char>::__new_allocator() [74] unsigned char* std::fill_n<unsigned char*, unsigned long, unsigned char>(unsigned char*, unsigned long, unsigned char const&)
+   [7] stbiw__encode_png_line(unsigned char*, int, int, int, int, int, int, signed char*) [33] std::__new_allocator<unsigned char>::~__new_allocator() [75] void std::_Destroy<unsigned char*>(unsigned char*, unsigned char*)
+  [34] std::__new_allocator<unsigned char>::_M_max_size() const [56] std::allocator_traits<std::allocator<unsigned char> >::deallocate(std::allocator<unsigned char>&, unsigned char*, unsigned long) [76] void std::_Destroy<unsigned char*, unsigned char>(unsigned char*, unsigned char*, std::allocator<unsigned char>&)
+  [41] std::__new_allocator<unsigned char>::max_size() const [57] std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long) [77] void std::__fill_a<unsigned char*, unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  [42] unsigned char* std::vector<unsigned char, std::allocator<unsigned char> >::_M_data_ptr<unsigned char>(unsigned char*) const [58] std::allocator_traits<std::allocator<unsigned char> >::max_size(std::allocator<unsigned char> const&) [78] __gnu_cxx::__enable_if<std::__is_byte<unsigned char>::__value, void>::__type std::__fill_a1<unsigned char>(unsigned char*, unsigned char*, unsigned char const&)
+  [35] std::allocator<unsigned char>::allocator(std::allocator<unsigned char> const&) [59] unsigned char* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned char*, unsigned long>(unsigned char*, unsigned long) [79] operator new(unsigned long, void*)
+  [43] std::allocator<unsigned char>::allocator() [60] std::vector<unsigned char, std::allocator<unsigned char> >::_S_max_size(std::allocator<unsigned char> const&) [1] main
+  [32] std::allocator<unsigned char>::~allocator() [61] std::vector<unsigned char, std::allocator<unsigned char> >::_S_check_init_len(unsigned long, std::allocator<unsigned char> const&) [3] stbi_write_png
+  [44] void std::_Destroy_aux<true>::__destroy<unsigned char*>(unsigned char*, unsigned char*) [62] std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_initialize(unsigned long) [4] stbi_write_png_to_mem
+  [45] std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) [63] std::vector<unsigned char, std::allocator<unsigned char> >::data() [5] stbi_zlib_compress

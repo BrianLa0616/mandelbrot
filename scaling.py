@@ -9,6 +9,43 @@ import os
 
 DEFAULT_RESOLUTIONS = [4000, 8000, 12000, 16000, 20000, 24000]
 
+def compile_cuda_mandelbrot():
+    """Compile the Mandelbrot CUDA code"""
+    subprocess.run(["make", "clean"], check=True)
+    subprocess.run(["make", "build/cuda"], check=True)
+
+def modify_cuda_resolution(size):
+    """Modify the resolution in the CUDA source file"""
+    with open('mandelbrot_cuda.cu', 'r') as file:
+        content = file.read()
+
+    # Update width and height in the CUDA source file
+    modified_content = re.sub(
+        r'const int width = \d+;',
+        f'const int width = {size};',
+        content
+    )
+    modified_content = re.sub(
+        r'const int height = \d+;',
+        f'const int height = {size};',
+        modified_content
+    )
+
+    with open('mandelbrot_cuda.cu', 'w') as file:
+        file.write(modified_content)
+
+def run_cuda_mandelbrot(size):
+    """Run the CUDA Mandelbrot program with specified size and return runtime"""
+    modify_cuda_resolution(size)
+    compile_cuda_mandelbrot()
+
+    result = subprocess.run(['./build/cuda'], capture_output=True, text=True)
+    
+    match = re.search(r'Mandelbrot compute took: (\d+\.\d+)', result.stdout)
+    if match:
+        return float(match.group(1))
+    return None
+
 def compile_mandelbrot():
     """Compile the Mandelbrot C++ code"""
     subprocess.run(["make", "clean"], check=True)
@@ -51,13 +88,13 @@ def perform_scaling_study(resolutions_to_test, plot=True):
     
     for i, size in enumerate(sizes):
         print(f"\nTesting resolution {size}x{size}")
-        times[i] = run_mandelbrot(size)
-        print(f"Runtime: {times[i]:.2f} seconds")
+        times[i] = run_cuda_mandelbrot(size)
+        print(f"Runtime: {times[i]:.4f} seconds")
     
     results = np.column_stack((sizes, times))
     np.savetxt('scaling_results.txt', results, 
                header='Resolution Runtime(s)', 
-               fmt=['%d', '%.3f'])
+               fmt=['%d', '%.4f'])
     
     if plot:
         plt.figure(figsize=(10, 6))
@@ -92,7 +129,7 @@ def main():
     print("\nScaling Study Results:")
     print("Resolution\tRuntime(s)")
     for size, time in zip(sizes, times):
-        print(f"{size}x{size}\t{time:.2f}")
+        print(f"{size}x{size}\t{time:.4f}")
 
 if __name__ == "__main__":
     main()
