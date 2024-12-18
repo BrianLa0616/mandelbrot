@@ -75,8 +75,8 @@ __global__ void calculatePixels(unsigned char* image, int width, int height,
 }
 
 int main() {
-    const int width = 24000;
-    const int height = 24000;
+    const int width = 1000;
+    const int height = 800;
     const size_t imageSize = width * height * 3 * sizeof(unsigned char);
 
     unsigned char* h_image = (unsigned char*)malloc(imageSize);
@@ -89,7 +89,7 @@ int main() {
     double y_start = -1.0;
     double y_fin = 1.0;
 
-    dim3 blockSize(64, 64);
+    dim3 blockSize(32, 32);
     dim3 gridSize((width + blockSize.x - 1) / blockSize.x,
                   (height + blockSize.y - 1) / blockSize.y);
     
