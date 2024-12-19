@@ -1,5 +1,6 @@
 CPP = g++
 NVCC = nvcc
+MPIFLAGS=-DMPI
 
 CXXFLAGS = -std=c++0x
 
@@ -23,6 +24,11 @@ build/cuda: mandelbrot_cuda.cu
 
 run_cuda: build/cuda
 	./build/cuda
+
+mpi: build/mpi
+
+build/mpi: mpi.cc
+	$(CPP) $(MPIFLAGS) $(CXXFLAGS) $(OPTFLAGS) $^ -o $@
 
 run: build/baseline
 	./build/baseline

@@ -28,8 +28,8 @@ int mandelbrot(double real, double imag)
 int main()
 {
     clock_t init_start = clock();
-    const int width = 24000; // Increased resolution for better PNG quality
-    const int height = 24000;
+    const int width = 10000; // Increased resolution for better PNG quality
+    const int height = 8000;
 
     double x_start = -2.0;
     double x_fin = 1.0;
