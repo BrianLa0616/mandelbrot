@@ -1,4 +1,5 @@
-CPP = g++
+CPP = CC
+CFLAGS=-lm
 NVCC = nvcc
 MPIFLAGS=-DMPI
 
@@ -27,8 +28,8 @@ run_cuda: build/cuda
 
 mpi: build/mpi
 
-build/mpi: mpi.cc
-	$(CPP) $(MPIFLAGS) $(CXXFLAGS) $(OPTFLAGS) $^ -o $@
+build/mpi: main.cc mpi.cc
+	$(CPP) $^ -o $@ $(MPIFLAGS) $(CFLAGS) $(OPTFLAGS) 
 
 run: build/baseline
 	./build/baseline
@@ -39,6 +40,7 @@ clean:
 	rm -f build/serial
 	rm -f build/cuda
 	rm -f build/baseline
+	rm -f build/mpi
 	rm -f build/*.out
 	rm -f build/*.o
 	rm -f build/*.gif
